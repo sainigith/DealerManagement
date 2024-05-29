@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Delear-Management'`, () => {
+  it(`should have as title 'dealer-management'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Delear-Management');
+    expect(app.title).toEqual('dealer-management');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Delear-Management app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('dealer-management app is running!');
   });
 });

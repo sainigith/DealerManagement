@@ -1,0 +1,28 @@
+<div class="container table-container">
+    <h2>Dealer Management</h2>
+    <button routerLink="/add-dealer" class="btn btn-primary mb-2">Add Dealer</button>
+    <table class="table table-striped table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Mobile</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dealer of dealers">
+          <td>{{ dealer.id }}</td>
+          <td>{{ dealer.name }}</td>
+          <td>{{ dealer.company_name }}</td>
+          <td>{{ dealer.mobile_no }}</td>
+          <td class="action-buttons">
+            <button (click)="editDealer(dealer.id)" class="btn btn-info">Edit</button>
+            <button (click)="deleteDealer(dealer.id)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
